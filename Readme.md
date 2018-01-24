@@ -6,9 +6,10 @@ Restful Service with Node, Express, Bootstrap and MongoDB for Devugees
 
 ## Requirements
 
-*You need to have Mongod Up&Running to launch the app*
+**You need to have Mongod Up&Running to launch the app**
 
-You can configure your connection from *config/database.config.js*
+You can configure your connection from **config/database.config.js**
+
 A dump of the collection used by the app is under */database/export.js*
 
 
@@ -38,11 +39,11 @@ i.e. <http://localhost:3000/api/students> returns all the students in db
 
 */api/students* List the students
 
-*/api/student* POST - create a new user
+*/api/student* **POST** - create a new user
 
-*/api/student:id* GET - read user
+*/api/student:id* **GET** - read user
 
-*/api/student:id* PUT - update user
+*/api/student:id* **PUT** - update user
 
-*/api/student:delete* DELETE - delete user
+*/api/student:delete* **DELETE** - delete user
 
