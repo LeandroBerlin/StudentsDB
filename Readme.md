@@ -1,4 +1,4 @@
-# Students Application
+# Students Database
 
 Restful Service with Node, Express, Bootstrap and MongoDB for Devugees
 
@@ -26,7 +26,7 @@ npm start
 
 You can browse the project frontend at <http://localhost:3000>
 
-The apis are available under /api i.e. /api/students returns all the students in db
+The apis are available under /api i.e. <http://localhost:3000/api/students> returns all the students in db
 
 
 
