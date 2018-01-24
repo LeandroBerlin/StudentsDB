@@ -47,3 +47,7 @@ i.e. <http://localhost:3000/api/students> returns all the students in db
 
 */api/student:delete* **DELETE** - delete user
 
+
+## DISCLAIMER
+
+Use at your own risk! ![biblethump](https://git.io/biblethump) 
