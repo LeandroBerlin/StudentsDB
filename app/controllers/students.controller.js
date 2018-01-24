@@ -28,7 +28,7 @@ exports.findAll = function(req, res) {
 };
 
 exports.findOne = function(req, res) {
-  console.log(req.params.studentId);
+    //  Retrieve one user by ID
     Student.findById(req.params.studentId, function(err, student) {
         if(err) {
             res.status(500).send({message: "Could not retrieve student with id " + req.params.studentId});
@@ -44,7 +44,7 @@ exports.update = function(req, res) {
       if(!student)
         return res.send({message: "Student not found!"});
 
-      // check all params that are set in req.body and attach/overwrite the student object
+      // Check all params that are set in req.body and attach/overwrite the student object
       for(attr in req.body) {
         student[attr] = req.body[attr];
       }

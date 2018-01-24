@@ -14,11 +14,11 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon main.js"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/LeoDvg/StudentDB/"
   },
   "keywords": [
     "node",
