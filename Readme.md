@@ -7,7 +7,7 @@ Restful Service with Node, Express, Bootstrap and MongoDB for Devugees
 ## Requirements
 
 You need to have mongo Up&Running. You can configure the db from config/database.config.js
-An export of the
+A dump of the database is under /database/export.js
 
 
 ## Setup
@@ -26,7 +26,7 @@ npm start
 
 You can browse the project frontend at <http://localhost:3000>
 
-The apis are available under /api i.e. /api/students
+The apis are available under /api i.e. /api/students returns all the students in db
 
 
 
