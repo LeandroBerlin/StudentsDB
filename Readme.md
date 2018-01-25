@@ -10,7 +10,7 @@ Restful Service with Node, Express, Bootstrap and MongoDB for Devugees
 
 You can configure your connection from **config/database.config.js**
 
-A dump of the collection used by the app is under */database/export.js*
+A dump of the collection used by the app is under */database/export.json*
 
 
 ## Setup

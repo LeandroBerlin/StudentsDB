@@ -11,7 +11,7 @@ function updateView(){
          subjects += `<button class="btn btn-sm btn-outline-info">${s}</button> `;
        });
 
-      $('tbody').append(`<tr><th scope="row">${index}</th><td>${student.name}</td><td>${student.age}</td>
+      $('tbody').append(`<tr><th scope="row">${index+1}</th><td>${student.name}</td><td>${student.age}</td>
        <td>${student.gender}</td><td>${student._id}</td>
        <td>${subjects}
        <td><button class="btn btn-sm btn-outline-secondary edit" data-id="${student._id}">edit</button>
@@ -56,6 +56,8 @@ $(document).on("click", "button.edit" , function() {
 
 $(document).on("click", "button.new" , function() {
   $('#theModal').modal('show');
+  //to avoid overwriting we force this empty
+  $('#newStudent input[name=studentId]').val('');
 });
 
 $(document).on("click", "button.find" , function(event) {
