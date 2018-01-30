@@ -43,7 +43,7 @@ exports.findOne = function(req, res) {
 };
 
 exports.findBySubject = function(req, res) {
-    // Retrieve and return all students from the database.
+    // Retrieve and students by one subject
     Student.find({'subjects': req.params.param }, function(err, students){
         if(err) {
             res.send({message: "Some error ocuured while retrieving students."});
@@ -54,7 +54,7 @@ exports.findBySubject = function(req, res) {
 };
 
 exports.findByAge = function(req, res) {
-    // Retrieve and return all students from the database.
+    // Retrieve and students by age
     Student.find({'age':req.params.param }, function(err, students){
         if(err) {
             res.send({message: "Some error ocuured while retrieving students."});
@@ -66,7 +66,7 @@ exports.findByAge = function(req, res) {
 
 
 exports.findByGender = function(req, res) {
-    // Retrieve and return all students from the database.
+    // Retrieve and students by gender
     Student.find({'gender':req.params.param }, function(err, students){
         if(err) {
             res.send({message: "Some error ocuured while retrieving students."});

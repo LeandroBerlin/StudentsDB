@@ -2,7 +2,7 @@
   "name": "StudentsDB",
   "version": "1.0.0",
   "description": "Frontend driven restful application with Node, Express, Bootstrap and MongoDB",
-  "main": "server.js",
+  "main": "main.js",
   "dependencies": {
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0",
@@ -14,7 +14,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "cp node_modules/bootstrap/dist/js/bootstrap.min.js app/views/assets/js/ && cp node_modules/bootstrap/dist/css/bootstrap.min.css app/views/assets/css/ && cp node_modules/jquery/dist/jquery.min.js app/views/assets/js/",
     "clean": "rm -r app/views/assets/js/*.min.js && rm -r app/views/assets/css/*.min.js",
     "start": "nodemon main.js"
@@ -29,7 +28,8 @@
     "express",
     "bootstrap",
     "devugees",
-    "exercises"
+    "exercises",
+    "mvc"
   ],
   "author": "LeoDvg",
   "license": "MIT"

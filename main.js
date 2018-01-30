@@ -47,7 +47,7 @@ router.get('/api/search/subject/:param', student.findBySubject);
 // Retrieve users by age
 router.get('/api/search/age/:param', student.findByAge);
 
-// Retrieve users by age
+// Retrieve users by gender
 router.get('/api/search/gender/:param', student.findByGender);
 
 // Update a student with studentId
@@ -56,12 +56,12 @@ router.put('/api/student/:studentId', student.update);
 // Delete a student with studentId
 router.delete('/api/student/:studentId', student.delete);
 
-// Web
+// Publish the View
 router.get("/",function(req,res){
   res.sendFile('index.html', { root: 'app/views' })
 });
 
-// listen for requests
+// Listen for requests
 app.listen(3000, function(){
     console.log("Server is listening on port 3000");
 });
