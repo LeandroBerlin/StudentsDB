@@ -3,7 +3,11 @@ const Student = require('../models/students.model.js');
 exports.create = function(req, res) {
     // Create and Save a new Student
     if(!req.body) {
-        res.status(400).send({message: "Student can not be empty"});
+        res.send({message: "Student can not be empty"});
+    }
+
+    if(req.body.file){
+      console.log(req.body.file);
     }
 
      newStudent = new Student(req.body);
@@ -20,7 +24,7 @@ exports.findAll = function(req, res) {
     // Retrieve and return all students from the database.
     Student.find(function(err, students){
         if(err) {
-            res.status(500).send({message: "Some error ocuured while retrieving students."});
+            res.send({message: "Some error ocuured while retrieving students."});
         } else {
             res.send(students);
         }
@@ -31,9 +35,43 @@ exports.findOne = function(req, res) {
     //  Retrieve one user by ID
     Student.findById(req.params.studentId, function(err, student) {
         if(err) {
-            res.status(500).send({message: "Could not retrieve student with id " + req.params.studentId});
+            res.send({message: "Could not retrieve student with id " + req.params.studentId});
         } else {
             res.send(student);
+        }
+    });
+};
+
+exports.findBySubject = function(req, res) {
+    // Retrieve and return all students from the database.
+    Student.find({'subjects': req.params.param }, function(err, students){
+        if(err) {
+            res.send({message: "Some error ocuured while retrieving students."});
+        } else {
+            res.send(students);
+        }
+    });
+};
+
+exports.findByAge = function(req, res) {
+    // Retrieve and return all students from the database.
+    Student.find({'age':req.params.param }, function(err, students){
+        if(err) {
+            res.send({message: "Some error ocuured while retrieving students."});
+        } else {
+            res.send(students);
+        }
+    });
+};
+
+
+exports.findByGender = function(req, res) {
+    // Retrieve and return all students from the database.
+    Student.find({'gender':req.params.param }, function(err, students){
+        if(err) {
+            res.send({message: "Some error ocuured while retrieving students."});
+        } else {
+            res.send(students);
         }
     });
 };
@@ -62,7 +100,7 @@ exports.delete = function(req, res) {
     // Delete a student with the specified studentId in the request
     Student.remove({_id: req.params.studentId}, function(err, data) {
         if(err) {
-            res.status(500).send({message: "Could not delete student with id " + req.params.id});
+            res.send({message: "Could not delete student with id " + req.params.id});
         } else {
             res.send({message: "Student deleted successfully!"})
         }

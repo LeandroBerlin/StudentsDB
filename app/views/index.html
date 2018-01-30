@@ -17,7 +17,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Students DataBase</a>
+        <a class="navbar-brand" href="#" title="Refresh the content">Students Database</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,7 +26,7 @@
         </div>
         <ul class="navbar-nav ml-auto">
           <form id="search" class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <input class="form-control mr-sm-2 search" type="text" placeholder="Search by ID">
                 <button class="btn btn-outline-light find" type="submit">Search</button>
           </form>
           &nbsp;
@@ -63,15 +63,15 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form id="newStudent">
+          <form id="newStudent" enctype="multipart/form-data" >
           <div class="modal-body">
               <div class="form-group">
                  <label for="Name">Student</label>
-                 <input type="text" class="form-control" name="name" placeholder="Name">
+                 <input type="text" class="form-control" name="name" placeholder="Name" required>
                </div>
                <div class="form-group">
                  <label for="Age">Age</label>
-                 <input type="number" class="form-control" name="age" placeholder="Age">
+                 <input type="number" class="form-control" name="age" placeholder="Age" required>
                </div>
                <div class="form-group">           
                  <input type="radio"  name="gender" class="gender" value="Female"> Female
@@ -80,7 +80,7 @@
                  <div class="form-group">    
                  <label for="Subjects">Subjects</label>
                  <input type="text" class="form-control" name="subjects" placeholder="Subjects">
-               </div>
+                 </div>
           </div>
           <div class="modal-footer">
             <input type="hidden" name="studentId">

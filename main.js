@@ -41,6 +41,15 @@ router.get('/api/students', student.findAll);
 // Retrieve a single student with studentId
 router.get('/api/student/:studentId', student.findOne);
 
+// Retrieve users by subject 
+router.get('/api/search/subject/:param', student.findBySubject);
+
+// Retrieve users by age
+router.get('/api/search/age/:param', student.findByAge);
+
+// Retrieve users by age
+router.get('/api/search/gender/:param', student.findByGender);
+
 // Update a student with studentId
 router.put('/api/student/:studentId', student.update);
 
